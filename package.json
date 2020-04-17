@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "vue-cli-service build && gh-pages -d dist -r https://ectuxzw.github.io/gogoanime/"
+    "deploy": "vue-cli-service build && gh-pages -d dist -r https://github.com/ectuxzw/gogoanime.git"
   },
   "dependencies": {
     "core-js": "^3.6.4",
