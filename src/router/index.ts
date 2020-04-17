@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
-import NewSeasons from '../views/NewSeasons.vue';
+import Season from '../views/NewSeasons.vue';
 import Genre from '../views/Genre.vue';
 
 Vue.use(VueRouter);
@@ -22,7 +22,7 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/new-seasons',
-    name: 'NewSeasons',
+    name: 'Season',
     component: Seasons,
   }, {
     path: '/genre',
