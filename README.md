@@ -1,4 +1,4 @@
-# eric-master
+# replica-gogoanime
 
 ## Project setup
 ```
