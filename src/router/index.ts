@@ -23,7 +23,7 @@ const routes: RouteConfig[] = [
   {
     path: '/new-seasons',
     name: 'NewSeasons',
-    component: NewSeasons,
+    component: Seasons,
   }, {
     path: '/genre',
     component: Genre,
