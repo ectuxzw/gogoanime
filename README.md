@@ -1,4 +1,4 @@
-# eric-master
+# eric-coursework
 
 ## Project setup
 ```
