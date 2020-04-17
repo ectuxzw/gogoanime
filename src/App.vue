@@ -4,7 +4,7 @@
       <img alt src="@/assets/logo.png" />
       <div class="nav-list">
         <router-link to="/">Home</router-link>
-        <router-link to="/anime-list">AnimeList</router-link>
+        <router-link to="/anime-list">Anime List</router-link>
         <!-- <router-link to="/genre">Genre</router-link> -->
         <a @mouseout="()=>{visible.display = 'none'}" @mouseover="()=>{visible.display = 'flex'}" id="genre">
           Genre
@@ -12,7 +12,7 @@
             <a :key="index" href v-for="(item, index) in genre">{{item}}</a>
           </div>
         </a>
-        <router-link to="/new-seasons">NewSeason</router-link>
+        <router-link to="/new-seasons">Season</router-link>
         <router-link to="/popular">Popular</router-link>
       </div>
     </div>
