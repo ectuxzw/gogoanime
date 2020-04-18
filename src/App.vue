@@ -1,19 +1,28 @@
 <template>
   <div id="app">
+    <div class="header">
+      <span>Login | Signup</span>
+      <!-- <img alt src="https://www17.gogoanime.io/img/bg/share_link_4.png" /> -->
+      <div class="share-link">Request | Contact</div>
+    </div>
     <div id="nav">
       <img alt src="@/assets/logo.png" />
       <div class="nav-list">
         <router-link to="/">Home</router-link>
         <router-link to="/anime-list">Anime List</router-link>
-        <!-- <router-link to="/genre">Genre</router-link> -->
         <a @mouseout="()=>{visible.display = 'none'}" @mouseover="()=>{visible.display = 'flex'}" id="genre">
           Genre
           <div :style="visible" class="dropdown">
             <a :key="index" href v-for="(item, index) in genre">{{item}}</a>
           </div>
         </a>
-        <router-link to="/new-seasons">Season</router-link>
+        <router-link to="/new-seasons">New Season</router-link>
+        <router-link to="/movies">Movies</router-link>
         <router-link to="/popular">Popular</router-link>
+      </div>
+      <div class="search-bar">
+        <input id="search-bar" name="search" type="text" />
+        <img alt src="https://www17.gogoanime.io/img/icon/searcch.png" />
       </div>
     </div>
     <router-view />
@@ -63,8 +72,34 @@ html {
   min-height: 100vh;
 }
 
+.header {
+  cursor: default;
+  width: 100%;
+  max-width: 1000px;
+  // height: 20px;
+  // padding: 0 50px;
+  padding: 10px 200px;
+  display: flex;
+  flex-flow: roww nowrap;
+  position: absolute;
+  justify-content: space-between;
+  font-size: 12px;
+  color: grey;
+  .share-link {
+    text-align: start;
+    width: 250px;
+    height: 20px;
+    // display: block;s
+    background-image: url("https://www17.gogoanime.io/img/bg/share_link_4.png");
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    // background-size: cover;
+    // background-clip: padding-box;
+    // overflow: hidden;
+  }
+}
 #nav {
-  padding: 30px;
+  padding: 30px 0;
   height: 60px;
   @extend .flex-row;
   align-items: center;
@@ -72,6 +107,7 @@ html {
   flex-flow: row nowrap;
   justify-content: center;
   width: 100vw;
+
   img {
     // width: auto;
     padding: 0 40px;
@@ -79,9 +115,9 @@ html {
     aspect-ratio: 1;
   }
   .nav-list {
-    width: 500px;
+    // width: 500px;
     @extend .flex-row;
-    justify-content: space-evenly;
+    justify-content: center;
     a {
       // font-weight: bold;
       font-size: 16px;
@@ -90,6 +126,7 @@ html {
       padding: 2px 0;
       text-transform: uppercase;
       transition: color 0.1s ease-out;
+      margin: 0 10px;
       &:hover,
       &.router-link-exact-active {
         color: #ffc119;
@@ -121,6 +158,29 @@ html {
           border: none;
         }
       }
+    }
+  }
+  .search-bar {
+    margin-left: 120px;
+    margin-right: 60px;
+
+    padding: 2px;
+    width: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+    border: grey 1px solid;
+    input {
+      background-color: #000;
+      line-height: 20px;
+      border: none;
+    }
+    // width: 30px;
+    img {
+      width: 20px;
+      height: 18px;
+      padding: 2px 5px;
     }
   }
 }
