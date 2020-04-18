@@ -3,6 +3,13 @@
     <div class="title-bar">
       <img alt class="anime_name_img_recent_release" src="@/assets/bg/recent_release.png" />
       <span>Popular Ongoing Updates</span>
+      <div class="pages">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
     </div>
     <div class="content">
       <popular-item
@@ -41,6 +48,8 @@
       height: 56px;
     }
     span {
+      flex: 1;
+
       padding-left: 5px;
       text-transform: uppercase;
       align-self: start;
@@ -50,6 +59,25 @@
       font-size: 14px;
       font-weight: bold;
       text-shadow: grey 1px 1px 2px;
+    }
+    .pages {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      :nth-child(1) {
+        background-color: #00a651;
+        color: #fff;
+      }
+      div {
+        cursor: pointer;
+        font-size: 12px;
+        padding: 8px 10px;
+
+        // background-color: #fff;
+        color: #000;
+        align-self: center;
+        text-align: center;
+      }
     }
   }
 
