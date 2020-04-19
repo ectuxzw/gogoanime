@@ -138,7 +138,7 @@ html {
       background-color: #000;
       position: absolute;
       top: 73px;
-      right: calc(50% - 400px);
+      right: calc(50% - 200px);
       width: 400px;
       height: 400px;
       display: flex;
